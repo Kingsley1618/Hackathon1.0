@@ -1,0 +1,10 @@
+.link {
+    color:white
+}
+
+.link:hover {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: var(--nav);
+}
