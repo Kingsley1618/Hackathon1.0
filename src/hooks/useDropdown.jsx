@@ -40,6 +40,7 @@ subtext : "You can, if only the company name and brand is been promoted."
   }));
 
   setIsOpen(updatedItems);
+  console.log(updatedItems)
 } 
 
     
