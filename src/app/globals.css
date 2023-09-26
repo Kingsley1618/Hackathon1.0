@@ -24,4 +24,19 @@ body {
  margin: 0;
 
 }
+html {
+  scroll-behavior: smooth;
+}
+*::-webkit-scrollbar{
+  scroll-behavior: smooth;
+  width: 5px;
+  
+  border-radius: 15px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:rgb(212,52,254);
+  border-radius: 15px;
+}
+
 

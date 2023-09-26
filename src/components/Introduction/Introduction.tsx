@@ -8,7 +8,8 @@ import Chain from "@/assets/Images/heroIcon.png"
 import HeroBg from "@/assets/Images/heroBg.png"
 export default function Introduction() {
   return (
-    <div className='lg:max-w-[1300px] md:max-w-[900px] max-w-[600px] px-[40px] mx-auto'>
+    <>
+    <div className='lg:max-w-[1300px] md:max-w-[900px] max-w-[600px] px-[40px] mx-auto pt-3'>
 <div className=' flex flex-col items-end justify-end'>
 <h1 className={styles.text}>Igniting a Revolution in HR Innovation</h1>
 <Image src={LineIcon} className="w-[100%] md:max-w-[220px] max-w-[130px]" width={220} height={40} alt="line"/>
@@ -46,5 +47,7 @@ a chance to win a Big prize</p>
 
 
     </div>
+    <hr className='border-t-0.5 border-gray-600'></hr>
+    </>
   )
 }
