@@ -8,3 +8,32 @@
     color: transparent;
     background-image: var(--nav);
 }
+
+
+@media screen and (max-width : 767px) {
+    .component {
+      width: 100%;
+      max-width: 765px;
+    }
+    }
+    @media screen and (min-width : 768px) and (max-width : 991px) {
+      .component {
+        width: 100%;
+        max-width: 800px;
+      }
+      }
+    
+      @media screen and (min-width : 992px) and (max-width : 1199px) {
+        .component {
+          width: 100%;
+          max-width: 992px;
+        }
+        }
+    
+        @media screen and (min-width : 1200px) {
+          .component {
+            width: 100%;
+            max-width: 1200px;
+          }
+          }
+    

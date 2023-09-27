@@ -22,9 +22,12 @@
 body {
   background-color: var(--background-color);
  margin: 0;
-
+scroll-behavior: smooth;
 }
 html {
+  scroll-behavior: smooth;
+}
+*{
   scroll-behavior: smooth;
 }
 *::-webkit-scrollbar{

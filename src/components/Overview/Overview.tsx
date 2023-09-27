@@ -4,7 +4,7 @@ import IdealImg from "@/assets/Images/ideaImg.png"
 export default function Overview() {
   return (
     <>
-    <div className="lg:max-w-[1300px] items-center md:max-w-[900px] max-w-[650px] px-[40px] mx-auto py-[30px] flex md:flex-row flex-col gap-x-6">
+    <section id="overview" className="lg:max-w-[1300px] items-center md:max-w-[900px] max-w-[650px] px-[40px] mx-auto py-[30px] flex md:flex-row flex-col gap-x-6">
 
 <div className='flex-[1] justify-center flex'>
     <Image src ={IdealImg} alt="bulbmessage" className='md:max-w-[450px] h-[auto] max-w-[280px] w-[100%] ' width={500} height={10} />
@@ -20,7 +20,7 @@ Introduction to getlinked <br></br><span className='text-[rgb(212,52,254)]'>tech
 
    
     
-    </div>
+    </section>
     <hr className='border-t-0.5 border-gray-600'></hr>
     </>
   )

@@ -5,6 +5,7 @@ import {FaXTwitter} from "react-icons/fa6"
 import {BiLogoFacebook} from "react-icons/bi"
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import styles from "@/components/Header/header.module.css"
 import {FaLinkedinIn} from "react-icons/fa6"
 export default function ContactForm() {
   const formik = useFormik({
@@ -26,7 +27,7 @@ export default function ContactForm() {
     },
   });
   return (
-    <div className="flex md:flex-row flex-col mb-[200px] md:gap-y-0 gap-y-[30px] lg:max-w-[990px] md:mt-[60px] mt-[20px] md:max-w-[900px] max-w-[600px] px-[40px] mx-auto justify-center items-center">
+    <div className={`flex md:flex-row flex-col mb-[200px] md:gap-y-0 gap-y-[30px] ${styles.component} md:mt-[60px] mt-[20px]  px-[15px] mx-auto justify-center items-center`}>
 
 <div className='flex flex-col md:order-first order-last md:text-left text-center justify-center md:gap-y-[20px] gap-y-1 text-white text-[1.1rem] flex-1'>
 <h1 className="md:block hidden font-bold text-[1.7rem] text-[rgb(212,52,254)]">Get in touch</h1>
@@ -50,7 +51,7 @@ export default function ContactForm() {
 <form className='text-white w-[100%]' onSubmit={formik.handleSubmit}>
           <h1 className='font-[900] text-[1.2rem] text-[rgb(212,52,254)]'>Questions or need assistance?</h1>
           <div className='font-[900] text-[1.2rem]  text-[rgb(212,52,254)]'>Let us know about it!</div>
-          <div className='flex flex-col gap-y-5 mt-6 w-[100%]'>
+          <div className='flex flex-col gap-y-3 mt-6 w-[100%]'>
             <div className="w-[100%]">
             <input
               type="text"
