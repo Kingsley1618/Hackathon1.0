@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
+import styles from "@/components/Header/header.module.css"
 import {useDropdown} from "@/hooks/useDropdown"
 import {IoMdAdd} from "react-icons/io"
 import FaqImg from "@/assets/Images/faqImg.png"
@@ -8,7 +9,7 @@ export default function Faq() {
 const dropdown = useDropdown()
   return (
     <>
-    <section id="faq" className="lg:max-w-[1300px] items-center md:max-w-[900px] max-w-[650px] px-[40px] mx-auto py-[30px] flex md:flex-row flex-col gap-x-6">
+    <section id="faq" className={`items-center ${styles.component} px-[15px] mx-auto py-[30px] flex md:flex-row flex-col gap-x-6`}>
 
 <div className='flex-[1] justify-center flex order-last'>
     <Image src ={FaqImg} alt="bulbmessage" className='md:max-w-[450px] h-[auto] max-w-[280px] w-[100%] ' width={500} height={10} />
@@ -22,7 +23,7 @@ Frequently Ask <br></br><span className='text-[rgb(212,52,254)]'>Question</span>
 <ul className="flex flex-col gap-y-5 mt-5">
 {dropdown.isOpen.map((list, index)=> {
     return <>
-    <li onClick={()=> dropdown.toggleHandler(index)} className="border-b-[1px] cursor-pointer border-b-[rgb(212,52,254)] text-white">
+    <li key = {index} onClick={()=> dropdown.toggleHandler(index)} className="border-b-[1px] cursor-pointer border-b-[rgb(212,52,254)] text-white">
         <div className="flex justify-between"><h1>{list.text}</h1> <IoMdAdd className="text-[rgb(212,52,254)]"/></div>
    {list.open && <p className="text-white mt-3 text-[.8rem]">{list.subtext}</p> }
     </li>

@@ -29,6 +29,7 @@ html {
 }
 *{
   scroll-behavior: smooth;
+ 
 }
 *::-webkit-scrollbar{
   scroll-behavior: smooth;

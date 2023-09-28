@@ -14,12 +14,14 @@
     .component {
       width: 100%;
       max-width: 765px;
+      margin: auto;
     }
     }
     @media screen and (min-width : 768px) and (max-width : 991px) {
       .component {
         width: 100%;
         max-width: 800px;
+        margin: auto;
       }
       }
     
@@ -27,6 +29,7 @@
         .component {
           width: 100%;
           max-width: 992px;
+          margin: auto;
         }
         }
     
@@ -34,6 +37,7 @@
           .component {
             width: 100%;
             max-width: 1200px;
+            margin: auto;
           }
           }
     

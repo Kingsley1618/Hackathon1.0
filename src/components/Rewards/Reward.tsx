@@ -2,10 +2,11 @@ import Image from 'next/image'
 import React from 'react'
 import rewardIcon from "@/assets/Images/rewardIcons.png"
 import priceImg from "@/assets/Images/priceImg.png"
+import styles from "@/components/Header/header.module.css"
 export default function Reward() {
   return (
     <>
-    <div className="lg:max-w-[1300px] items-center md:max-w-[900px] max-w-[650px] px-[40px] mx-auto py-[30px] flex md:flex-row flex-col gap-x-6">
+    <div className={`px-[15px] ${styles.component} mx-auto py-[30px] flex md:flex-row flex-col gap-x-6`}>
 
 <div className='flex-[1] justify-center flex md:order-first order-[2]'>
     <Image src ={priceImg} alt="bulbmessage" className='md:max-w-[450px] h-[auto] max-w-[400px] w-[100%] ' width={500} height={10} />

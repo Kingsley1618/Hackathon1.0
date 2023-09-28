@@ -10,3 +10,48 @@
     font-weight: 900;
     position: relative;
 }
+
+.image {
+    animation-name: image;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.star {
+    animation-name: star;
+    animation-duration: 20s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    z-index: -1;
+    top:10px;
+    position: absolute;
+}
+
+@keyframes image {
+    0% {
+        scale : 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes star {
+    0% {
+       
+        left:5%;
+    }
+50% {
+    top:50%;
+    left:50%;
+}
+    100% {
+    
+     left:90%;
+    }
+}

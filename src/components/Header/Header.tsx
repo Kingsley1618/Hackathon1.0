@@ -9,7 +9,7 @@ export default function Header() {
   const router = useRouter()
   return (
    <>
-<div className={`flex ${styles.component} justify-between  px-[10px] mx-auto gap-x-8 min-h-[14.5vh] h-[100%] items-center w-[100%]`}>
+<div className={`flex justify-between  px-[10px] ${styles.component} mx-auto gap-x-8 min-h-[14.5vh] h-[100%] items-center w-[100%]`}>
 <h1 className="font-[900] lg:text-[1.7rem] text-[1.4rem] ps-3" style = {{fontFamily: "Clash Display,sans-serif"}}><span className="text-white">get</span><span className="text-[rgb(212,52,254)]">linked</span></h1>
 
 
