@@ -7,10 +7,12 @@ import Star from "@/assets/Images/purplestarIcon.png"
 import Bulb from "@/assets/Images/lightbulbIcon.png"
 import { motion } from "framer-motion"
 import HeroBall from "@/assets/Images/heroBall.png"
+import { useRouter } from 'next/navigation'
 import Chain from "@/assets/Images/heroIcon.png"
 import screenstyle from "@/components/Header/header.module.css"
 import HeroBg from "@/assets/Images/heroBg.png"
 export default function Introduction() {
+  const router = useRouter()
   return (
     <>
     <motion.div  
@@ -37,7 +39,7 @@ export default function Introduction() {
 <p className='text-white' style={{fontSize:"calc(.8rem + .4vw)"}}>Participate in getlinked tech Hackathon 2023 stand
 a chance to win a Big prize</p>
 
-<button className='justify-center mt-6 bg-btngradient rounded-md text-white py-3 w-[160px] w-[100%]'>Register</button>
+<button className='justify-center mt-6 bg-btngradient rounded-md text-white py-3 w-[160px] w-[100%]' onClick={()=> router.push("/auth/register")}>Register</button>
 </div>
 
 <div className="flex-1 relative md:mt-0 mt-[60px]">

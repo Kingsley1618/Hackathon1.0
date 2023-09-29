@@ -22,7 +22,7 @@ const dropdown = useDropdown()
 <div className='flex-[1] md:mt-0 mt-4'>
 
 <motion.h1
-initial={{ opacity: 0, x:30 }}
+initial={{ opacity: 0, x:10 }}
 whileInView={{ opacity: 1, x:0, transition : {duration: 1.1}}}
 viewport={{once:true}} className='text-white font-bold text-[1.7rem] md:text-left text-center' style={{fontSize:"calc(1rem + 1vw)"}}>
 Frequently Ask <br></br><span className='text-[rgb(212,52,254)]'>Question</span></motion.h1>
