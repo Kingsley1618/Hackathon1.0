@@ -24,7 +24,7 @@ whileInView={{ opacity: 1, x:0, transition : {duration: 1.1}}}
 viewport={{once:true}} className='text-white font-bold text-[1.7rem] md:text-left text-center' style={{fontSize:"calc(1rem + 1vw)"}}>
 Rules and <br></br><span className='text-[rgb(212,52,254)]'>Guidelines</span></motion.h1>
 
-<p className='text-white text-[.8rem] md:text-left text-center md:mt-0 mt-5'>Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you're a coding genius, a design maverick, or a concept wizard, you'll have the chance to transform your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!</p>
+<p className='text-white text-[.8rem] md:text-left text-center md:mt-0 mt-5'>Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as day: to shape the future. Whether you&apos;re a coding genius, a design maverick, or a concept wizard, you&apos;ll have the chance to transform your ideas into reality. Solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that&apos;s what we&apos;re all about!</p>
     
     </div>
     </div>

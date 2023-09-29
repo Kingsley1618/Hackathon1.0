@@ -78,7 +78,7 @@ if(ref.current.checked) {
           <div className="grid md:grid-cols-2 grid-cols-4 mt-4 gap-x-4 gap-y-4 w-[100%]">
             <div className="w-[100%] md:col-span-1 col-span-4">
               <label htmlFor="teamname" className="text-[.9rem]">
-                Team's Name
+                Team&apos;s Name
               </label>
               <input
                 type="text"
