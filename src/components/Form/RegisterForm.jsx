@@ -45,7 +45,7 @@ if(ref.current.checked) {
       size: Yup.string().notOneOf(['none'], 'Please select a group size').required('Required'),
     }),
     onSubmit: (values, { resetForm }) => {
-      console.log('Form submitted with values:', values);
+      resetForm();
 
       fetch('https://formspree.io/f/xnqkvlgz', {
         method : 'POST',
@@ -55,7 +55,7 @@ if(ref.current.checked) {
         body : JSON.stringify(values)
       }).then((res)=> {
         console.log('Form submitted successfully', res);
-        resetForm();
+      
         openNotification()
       })
     },

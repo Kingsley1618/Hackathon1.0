@@ -31,7 +31,7 @@ to the practices described in this policy.</p>
 <div className='flex gap-x-3 mt-5'><Image src = {CheckImg} className='w-[100%] max-w-[20px] h-[auto]' width={20} height={20} alt='policy' />
 <div className='break-word flex-1 text-[.9rem]'>You are licensed to use the item available at any free source sites, for your project developement</div>
 </div>
-<button className='md:flex justify-center hidden bg-btngradient rounded-md text-white py-3 w-[150px] w-[100%]'>Read More</button>
+<button className='flex mx-auto mt-4 justify-center  bg-btngradient rounded-md text-white py-3 w-[150px] w-[100%]'>Read More</button>
 </div>
 
 </div>

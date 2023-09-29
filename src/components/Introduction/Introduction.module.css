@@ -5,7 +5,7 @@
 }
 
 .techtext {
-    font-size: calc(1rem + 2.7vw);
+    font-size: calc(.7rem + 2.7vw);
     color: white;
     font-weight: 900;
     position: relative;

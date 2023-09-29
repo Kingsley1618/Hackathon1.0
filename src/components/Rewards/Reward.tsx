@@ -1,6 +1,8 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import rewardIcon from "@/assets/Images/rewardIcons.png"
+import { motion } from "framer-motion"
 import priceImg from "@/assets/Images/priceImg.png"
 import styles from "@/components/Header/header.module.css"
 export default function Reward() {
@@ -8,9 +10,12 @@ export default function Reward() {
     <>
     <div className={`px-[15px] ${styles.component} mx-auto py-[30px] flex md:flex-row flex-col gap-x-6`}>
 
-<div className='flex-[1] justify-center flex md:order-first order-[2]'>
+<motion.div
+ initial={{ opacity: 0, scale:0 }}
+ whileInView={{ opacity: 1, scale:1, transition : {duration: 1.1}}}
+ viewport={{once:true}} className='flex-[1] justify-center flex md:order-first order-[2]'>
     <Image src ={priceImg} alt="bulbmessage" className='md:max-w-[450px] h-[auto] max-w-[400px] w-[100%] ' width={500} height={10} />
-</div>
+</motion.div>
 
 <div className='flex-[1] md:mt-0 mt-4 flex flex-col justify-center items-center md:gap-y-[50px] gap-y-8'>
 <div className="order-[1]">

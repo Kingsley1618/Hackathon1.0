@@ -2,14 +2,18 @@
 import React from 'react'
 import {FaInstagram} from "react-icons/fa"
 import {FaXTwitter} from "react-icons/fa6"
+import Loader from "@/assets/Images/loading-indicator.png"
 import { Button, notification } from 'antd';
 import {BiLogoFacebook} from "react-icons/bi"
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import styles from "@/components/Header/header.module.css"
 import {FaLinkedinIn} from "react-icons/fa6"
+import Image from 'next/image';
+
 export default function ContactForm() {
   const [api, contextHolder] = notification.useNotification()
+
   const openNotification = () => {
     api.open({
       message: 'Submitted',
@@ -30,11 +34,11 @@ export default function ContactForm() {
       email: Yup.string().email('Invalid email address').required('Required'),
       message: Yup.string().required('Required'),
     }),
-    onSubmit: (values, { resetForm }) => {
-      
-      console.log('Form submitted with values:', values);
+    onSubmit: async (values, { resetForm }) => {
 
-      fetch('https://formspree.io/f/xnqkvlgz', {
+      resetForm();
+
+      await fetch('https://formspree.io/f/xnqkvlgz', {
         method : 'POST',
         headers : {
           'Content-type' : 'application/json'
@@ -42,7 +46,8 @@ export default function ContactForm() {
         body : JSON.stringify(values)
       }).then((res)=> {
         console.log('Form submitted successfully', res);
-        resetForm();
+
+
         openNotification()
       })
     },
@@ -136,7 +141,7 @@ export default function ContactForm() {
             className='flex mb-8 justify-center bg-btngradient rounded-sm text-white py-3 w-[150px] mt-12 mx-auto w-[100%]'
             type="submit"
           >
-            Submit
+      Submit
           </button>
         </form>
 </div>
