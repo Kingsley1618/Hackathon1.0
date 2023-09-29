@@ -15,7 +15,7 @@ const dropdown = useDropdown()
 <motion.div
  initial={{ opacity: 0, scale:0 }}
  whileInView={{ opacity: 1, scale:1, transition : {duration: 1.1}}}
- viewport={{once:true}}  className='flex-[1] justify-center flex order-last'>
+ viewport={{once:true}}  className='flex-[1] justify-center flex order-last md:mt-0 mt-8'>
     <Image src ={FaqImg} alt="bulbmessage" className='md:max-w-[450px] h-[auto] max-w-[280px] w-[100%] ' width={500} height={10} />
 </motion.div>
 

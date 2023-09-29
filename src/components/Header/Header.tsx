@@ -28,7 +28,7 @@ export default function Header() {
 
 </div> : null}
 
-{nav.openNav ? <div className='w-[90%] mx-auto fixed border-[1px] p-[15px] top-[50px] left-0 right-0  z-[99999] border-gray-600 rounded-lg h-[70vh] bg-[rgb(21,14,40)]'>
+{nav.openNav ? <div className='w-[90%] mx-auto fixed border-[1px] p-[15px] top-[50px] left-0 right-0 md:hidden  z-[99999] border-gray-600 rounded-lg h-[70vh] bg-[rgb(21,14,40)]'>
 <AiOutlineClose onClick = {()=> nav.closeHandler()} className={`ml-auto block text-white font-bold text-[1.5rem] rounded-full ${styles.closeIcon}`} />
 <ul className="flex flex-col gap-y-4 text-[1rem] text-white">
 <Link href="/" className={styles.link} onClick = {()=> nav.closeHandler()}><li>Timeline</li></Link>
