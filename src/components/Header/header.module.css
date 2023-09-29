@@ -9,6 +9,15 @@
     background-image: var(--nav);
 }
 
+.closeIcon {
+    border: 1px solid;
+    border-image-source: linear-gradient(270deg, #903aff, #fe34b9);
+    border-image-slice: 1;
+    border-image-width: 1; /* Adjust the border width as needed */
+    border-image-outset: 0; 
+ cursor: pointer;
+}
+
 
 @media screen and (max-width : 767px) {
     .component {

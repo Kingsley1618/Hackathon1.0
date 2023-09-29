@@ -2,12 +2,21 @@
 import React from 'react'
 import {FaInstagram} from "react-icons/fa"
 import {FaXTwitter} from "react-icons/fa6"
+import { Button, notification } from 'antd';
 import {BiLogoFacebook} from "react-icons/bi"
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import styles from "@/components/Header/header.module.css"
 import {FaLinkedinIn} from "react-icons/fa6"
 export default function ContactForm() {
+  const [api, contextHolder] = notification.useNotification()
+  const openNotification = () => {
+    api.open({
+      message: 'Submitted',
+      description: 'All details have been saved and submitted successfully',
+      duration: 0,
+    });
+  };
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -21,14 +30,26 @@ export default function ContactForm() {
       email: Yup.string().email('Invalid email address').required('Required'),
       message: Yup.string().required('Required'),
     }),
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       
       console.log('Form submitted with values:', values);
+
+      fetch('https://formspree.io/f/xnqkvlgz', {
+        method : 'POST',
+        headers : {
+          'Content-type' : 'application/json'
+        },
+        body : JSON.stringify(values)
+      }).then((res)=> {
+        console.log('Form submitted successfully', res);
+        resetForm();
+        openNotification()
+      })
     },
   });
   return (
     <div className={`flex md:flex-row flex-col mb-[200px] md:gap-y-0 gap-y-[30px] ${styles.component} md:mt-[60px] mt-[20px]  px-[15px] mx-auto justify-center items-center`}>
-
+ {contextHolder}
 <div className='flex flex-col md:order-first order-last md:text-left text-center justify-center md:gap-y-[20px] gap-y-1 text-white text-[1.1rem] flex-1'>
 <h1 className="md:block hidden font-bold text-[1.7rem] text-[rgb(212,52,254)]">Get in touch</h1>
 <p className='md:block hidden'>Contact <br />Information</p>

@@ -11,7 +11,7 @@ export default function Overview() {
     <Image src ={IdealImg} alt="bulbmessage" className='md:max-w-[450px] h-[auto] max-w-[280px] w-[100%] ' width={500} height={10} />
 </div>
 
-<div className='flex-[1] md:mt-0 mt-4 flex md:flex-row flex-col'>
+<div className='flex-[1] md:mt-0 mt-4'>
 
 <h1 className='text-white font-bold text-[1.7rem] md:text-left text-center' style={{fontSize:"calc(1rem + 1vw)"}}>
 Introduction to getlinked <br></br><span className='text-[rgb(212,52,254)]'>tech Hackathon 1.0</span></h1>

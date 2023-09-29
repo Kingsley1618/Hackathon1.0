@@ -5,7 +5,7 @@ import RuleImg from "@/assets/Images/rulesImg.png"
 export default function Rules() {
   return (
     <>
-    <div className={`${styles.component} max-w-[650px] px-[15px] mx-auto py-[30px] flex md:flex-row flex-col gap-x-6`}>
+    <div className={`${styles.component} max-w-[650px] px-[15px] items-center mx-auto py-[30px] flex md:flex-row flex-col gap-x-6`}>
 
 <div className='flex-[1] justify-center flex md:order-last'>
     <Image src ={RuleImg} alt="bulbmessage" className='md:max-w-[450px] h-[auto] max-w-[280px] w-[100%] ' width={500} height={10} />

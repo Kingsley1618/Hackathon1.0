@@ -3,13 +3,21 @@ import React, { useState, useRef } from 'react'
 import RegisterImg from "@/assets/Images/registerImg.png"
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { Button, notification } from 'antd';
 import styles from "@/components/Header/header.module.css"
 import Image from 'next/image';
 import WalkImg from "@/assets/Images/register.png"
 export default function RegisterForm() {
   const [isChecked, setIsChecked] = useState(false)
+  const [api, contextHolder] = notification.useNotification();
   const ref = useRef()
-
+  const openNotification = () => {
+    api.open({
+      message: 'Submitted',
+      description: 'All details have been saved and submitted successfully',
+      duration: 0,
+    });
+  };
   function toggleChecked(event) {
 if(ref.current.checked) {
   setIsChecked(true)
@@ -36,13 +44,25 @@ if(ref.current.checked) {
       category: Yup.string().notOneOf(['none'], 'Please select a category').required('Required'),
       size: Yup.string().notOneOf(['none'], 'Please select a group size').required('Required'),
     }),
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       console.log('Form submitted with values:', values);
+
+      fetch('https://formspree.io/f/xnqkvlgz', {
+        method : 'POST',
+        headers : {
+          'Content-type' : 'application/json'
+        },
+        body : JSON.stringify(values)
+      }).then((res)=> {
+        console.log('Form submitted successfully', res);
+        resetForm();
+        openNotification()
+      })
     },
   });
   return (
     <div className={`flex md:flex-row flex-col mb-[200px] md:gap-y-0 gap-y-[30px] ${styles.component} md:mt-[60px] mt-[20px]  px-[15px] mx-auto justify-center items-center`}>
-
+ {contextHolder}
 <div className='flex-1'>
 <Image src ={RegisterImg} alt="registerimg" className='' width={800} height={800} />
 </div>
@@ -82,7 +102,7 @@ if(ref.current.checked) {
                 type="tel"
                 id="Phone"
                 name="Phone"
-                pattern="[0-9]*"
+               
                 className={`mt-1 w-[100%] text-[.8rem] outline-0  border-[1px] focus:border-[rgb(212,52,254)] rounded-md bg-[transparent] text-white py-3 px-5 ${
                   formik.touched.Phone && formik.errors.Phone ? 'border-red-500' : 'border-white'
                 }`}
