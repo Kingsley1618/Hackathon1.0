@@ -17,8 +17,8 @@ export default function Introduction() {
      initial={{ opacity: 0, x: -10 }}
   whileInView={{ opacity: 1, x: 0 , transition : {duration: 1.1}}}
   viewport={{once:true}}
-    className={`${screenstyle.component} relative px-[15px] mx-auto pt-3 py-[20px]`}>
-<div className=' flex flex-col items-end justify-end'>
+    className={`${screenstyle.component} relative px-[15px] mx-auto`}>
+<div className=' flex flex-col items-end justify-end mt-[20px]'>
 <h1 className={styles.text}>Igniting a Revolution in HR Innovation</h1>
 <Image src={LineIcon} className="w-[100%] md:max-w-[220px] max-w-[130px]" width={220} height={40} alt="line"/>
 </div>
